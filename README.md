@@ -1,6 +1,6 @@
 # pgsql_hackathon
 
-hackathon
+![A diagram showing the range of hackathon.](pgsql_hackathon.png 'Solution Architecture')
 
 1. create resource group
 2. create Storage Account
