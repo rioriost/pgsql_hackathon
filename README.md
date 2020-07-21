@@ -13,7 +13,7 @@ hackathon
 6. Upload dummy.data to Container
 7. Check if template works
 8. Edit code as follows
-```
+```csharp
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -49,7 +49,7 @@ public static void Run(Stream myBlob, string name, ILogger log)
 9. Create function.proj file with App Service Editor
 
 How to find the version of Npgsql
-```
+```shell
 % nuget list Npgsql | grep Npgsql.EntityFrameworkCore
 Npgsql.EntityFrameworkCore.PostgreSQL 3.1.4
 Npgsql.EntityFrameworkCore.PostgreSQL.Design 1.1.0
@@ -59,7 +59,7 @@ Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime 3.1.4
 Npgsql.EntityFrameworkCore.PostgreSQL.Trigrams 3.1.4
 ```
 
-```
+```xml
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
@@ -73,14 +73,16 @@ Npgsql.EntityFrameworkCore.PostgreSQL.Trigrams 3.1.4
 
 10. Create PostgreSQL
 Allow access to Azure services
-```
+```shell
 psql "host=riohackdemopgsql.postgres.database.azure.com port=5432 dbname=postgres user=rifujita@riohackdemopgsql password=Passw0rd# sslmode=require"
+```
+```plpgsql
 CREATE TABLE logs (id BIGSERIAL PRIMARY KEY, content JSONB);
 CREATE INDEX content_index ON logs USING GIN (content jsonb_path_ops);
 ```
 
 11. Edit code as follows
-```
+```csharp
 using System;
 using System.Collections.Generic;
 using System.IO;
