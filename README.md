@@ -77,6 +77,8 @@ Npgsql.EntityFrameworkCore.PostgreSQL.Trigrams 3.1.4
 10. Create [PostgreSQL](https://docs.microsoft.com/en-us/azure/postgresql/quickstart-create-server-database-portal)
 
 [Allow access to Azure services](https://docs.microsoft.com/en-us/azure/postgresql/howto-manage-firewall-using-portal)
+
+Create a table and an index with psql command
 ```shell
 psql "host=riohackdemopgsql.postgres.database.azure.com port=5432 dbname=postgres user=rifujita@riohackdemopgsql password=Passw0rd# sslmode=require"
 ```
