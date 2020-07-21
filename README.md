@@ -5,10 +5,13 @@
 1. create resource group
 2. create Storage Account
 3. create Containers
+
     path: samples-workitems
 4. create Function App
 5. create Azure Blob Storage trigger
+
     path: samples-workitems/{name}
+    
     Storage Account Connection: riohackathonsa
 6. Upload dummy.data to Container
 7. Check if template works
