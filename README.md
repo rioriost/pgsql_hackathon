@@ -2,19 +2,19 @@
 
 ![A diagram showing the range of hackathon.](pgsql_hackathon.png 'Solution Architecture')
 
-1. create resource group
-2. create Storage Account
-3. create Containers
+1. create [Resource Group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)
+2. create [Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal)
+3. create [Containers](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal)
 
     path: samples-workitems
-4. create Function App
+4. create [Function App](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-storage-blob-triggered-function)
 5. create Azure Blob Storage trigger
 
     path: samples-workitems/{name}
     
     Storage Account Connection: riohackathonsa
 6. Upload dummy.data to Container
-7. Check if template works
+7. Check if template works with [Monitor](https://docs.microsoft.com/en-us/azure/azure-functions/functions-monitoring?tabs=cmd)
 8. Edit code as follows
 ```csharp
 using System;
@@ -49,7 +49,7 @@ public static void Run(Stream myBlob, string name, ILogger log)
     }
 }
 ```
-9. Create function.proj file with App Service Editor
+9. Create [function.proj](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-csharp#using-nuget-packages) file with [App Service Editor](https://github.com/projectkudu/kudu/wiki/App-Service-Editor)
 
 How to find the version of Npgsql
 ```shell
@@ -74,9 +74,9 @@ Npgsql.EntityFrameworkCore.PostgreSQL.Trigrams 3.1.4
 </Project>
 ```
 
-10. Create PostgreSQL
+10. Create [PostgreSQL](https://docs.microsoft.com/en-us/azure/postgresql/quickstart-create-server-database-portal)
 
-Allow access to Azure services
+[Allow access to Azure services](https://docs.microsoft.com/en-us/azure/postgresql/howto-manage-firewall-using-portal)
 ```shell
 psql "host=riohackdemopgsql.postgres.database.azure.com port=5432 dbname=postgres user=rifujita@riohackdemopgsql password=Passw0rd# sslmode=require"
 ```
