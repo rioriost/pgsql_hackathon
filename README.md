@@ -75,6 +75,7 @@ Npgsql.EntityFrameworkCore.PostgreSQL.Trigrams 3.1.4
 ```
 
 10. Create PostgreSQL
+
 Allow access to Azure services
 ```shell
 psql "host=riohackdemopgsql.postgres.database.azure.com port=5432 dbname=postgres user=rifujita@riohackdemopgsql password=Passw0rd# sslmode=require"
