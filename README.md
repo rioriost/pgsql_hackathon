@@ -45,8 +45,21 @@ public static void Run(Stream myBlob, string name, ILogger log)
         }
     }
 }
-
+```
 9. Create function.proj file with App Service Editor
+
+How to find the version of Npgsql
+```
+% nuget list Npgsql | grep Npgsql.EntityFrameworkCore
+Npgsql.EntityFrameworkCore.PostgreSQL 3.1.4
+Npgsql.EntityFrameworkCore.PostgreSQL.Design 1.1.0
+Npgsql.EntityFrameworkCore.PostgreSQL.FuzzyStringMatch 3.1.4
+Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite 3.1.4
+Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime 3.1.4
+Npgsql.EntityFrameworkCore.PostgreSQL.Trigrams 3.1.4
+```
+
+```
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
