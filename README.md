@@ -44,7 +44,9 @@ public static void Run(Stream myBlob, string name, ILogger log)
                 }
                 fieldnum += 1;
             }
-            sqllist.Add(string.Format("INSERT INTO logs (content) VALUES ('{0}')", buf + string.Join(",", items) + "]}"));
+            buf = string.Format("INSERT INTO logs (content) VALUES ('{0}')", buf + string.Join(",", items) + "]}");
+            log.LogInformation(buf);
+            sqllist.Add(buf);
         }
     }
 }
