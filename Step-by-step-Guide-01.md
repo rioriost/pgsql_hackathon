@@ -121,7 +121,7 @@ Step-by-step-Guide-01
 
 3. On the **New Function** blade, specify the following configuration options:
 
-   a. Check if **pass** is same with the pass you created in the **task 3**.
+   a. Check if **path** is same with the path you created in the **task 3**.
    
    b. Select **New** for the **Storage Account Connection**.
 ![New Function blade.](images/20200722074522.png 'New Function')
@@ -135,24 +135,64 @@ Step-by-step-Guide-01
 6. Select **Monitor** from the left-hand menu.
 ![BlobTrigger1 blade.](images/20200722075105.png 'BlobTrigger1')
 
-7. 
-![A diagram showing the range of hackathon.](images/20200722075116.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075125.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075158.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075208.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075212.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075219.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075333.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075629.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075717.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075729.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075803.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075814.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075823.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075909.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075918.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075924.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075941.png 'Solution Architecture')
+7. Select **Logs**.
+![Monitor blade.](images/20200722075116.png 'Monitor')
+
+8. After connecting Application Insights, you'll see the message **Connected!**. Leave it open for debug.
+![Logs.](images/20200722075125.png 'Logs')
+
+### Task 7: Check if the Function template works
+
+1. Open **another browser window**, then navigate to Storage container, select **Upload**.
+![container blade.](images/20200722075158.png 'container')
+
+2. Upload the file **dummy.data** again.
+![Upload blob blade.](images/20200722075208.png 'Upload blob')
+
+3. After upload completed, you'll see the message.
+![Upload Completed for dummy.data.](images/20200722075212.png 'Upload Completed')
+
+4. If you succesfully configured above tasks, on the window **showing Function logs**, you'll see the message, **C# Blob trigger function Processed blob...**. Then, select **Code + Test**.
+![Function logs.](images/20200722075219.png 'Function logs')
+
+5. You'll find the same message in the code.
+![Code blade.](images/20200722075333.png 'Code')
+
+### Task 8: Edit Code
+
+1. On the **Code + Test** blade, edit the [code](ingest_function1.cs) to write SQL queris to log. Don't forget to save it.
+![Code blade.](images/20200722075629.png 'Code')
+
+### Task 9: Create function.proj
+
+1. Select **App Service Editor (Preview)** from the left-hand menu.
+![Function blade.](images/20200722075717.png 'function')
+
+2. On the **App Service Editor (Preview)** blade, select **Go->**.
+![App Service Editor (Preview).](images/20200722075729.png 'App Service Editor (Preview)')
+
+3. After connecting **App Service Editor (Preview)**, seleect **Shell icon** from the left-hand menu.
+![App Service Editor (Preview).](images/20200722075803.png 'App Service Editor (Preview)')
+
+4. Type **ls** to list the files and the directories.
+![ls.](images/20200722075814.png 'ls')
+
+5. Type **cd BlobTrigger1**.
+![cd BlobTrigger1.](images/20200722075823.png 'cd BlobTrigger1')
+
+6. Type **touch function.proj**.
+![touch function.proj.](images/20200722075909.png 'touch function.proj')
+
+7. Type **open function.proj**.
+![open function.proj.](images/20200722075918.png 'open function.proj')
+
+8. Select the input field.
+![input field.](images/20200722075924.png 'input field')
+
+9. Edit [function.proj](function.proj). Check the status is changed to **SAVED** on the upper right of the blade.
+![function.proj.](images/20200722075941.png 'function.proj')
+
+ 
 ![A diagram showing the range of hackathon.](images/20200722075942.png 'Solution Architecture')
 ![A diagram showing the range of hackathon.](images/20200722080004.png 'Solution Architecture')
 ![A diagram showing the range of hackathon.](images/20200722080015.png 'Solution Architecture')
