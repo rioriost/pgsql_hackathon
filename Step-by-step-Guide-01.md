@@ -226,11 +226,25 @@
 7. On the **PostgreSQL** blade, select **Connection security** from the left-hand menu.
 ![PostgreSQL blade.](images/20200722080259.png 'PostgreSQL blade')
 
-8. 
-![A diagram showing the range of hackathon.](images/20200722080309.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722080328.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722080438.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722080513.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722080705.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722080749.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722081531.png 'Solution Architecture')
+8. On the **Connection Security** blade, select **Yes** for the **Allow access to Azure services**, then select **Save**. After that, select **Connection strings** from the left-hand menu.
+![Connection Security blade.](images/20200722080309.png 'Connection Security')
+
+9. Copy a **PSQL connection string** to clipboard.
+![Connection strings.](images/20200722080328.png 'Connection strings')
+
+10. Open Cloud Shell, then paste **connection string** and change **{your_database}** to **postgres** and **{your_password}** to **your password** you configured when the PostgreSQL was created.
+![Cloud Shell.](images/20200722080438.png 'Cloud Shell')
+
+11. After connected to PostgreSQL, [create a table and an index](create_table.txt).
+![Create table.](images/20200722080513.png 'Create table')
+
+### Task 11: Edit Code
+
+1. On the **Code + Test** blade, edit the [code](ingest_function2.cs) to ingest data to PostgreSQL. Don't forget to save it.
+![Code.](images/20200722080705.png 'Code')
+
+2. Open **another browser window**, then navigate to Storage container, select **Upload**. And then, upload the file, **dummy.data** once again.
+![Upload the file.](images/20200722080749.png 'Upload')
+
+3. If you succesfully configured all the tasks, on the **Cloud Shell**, you'll see the result of **SELECT COUNT(\*) FROM logs**.
+![SELECT Query.](images/20200722081531.png 'SELECT Query')
