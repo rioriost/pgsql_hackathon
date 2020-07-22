@@ -1,4 +1,4 @@
-Step-by-step-Guide-01
+# Step-by-step-Guide-01
 
 ### Task 1: Create Resource Group
 
@@ -192,15 +192,41 @@ Step-by-step-Guide-01
 9. Edit [function.proj](function.proj). Check the status is changed to **SAVED** on the upper right of the blade.
 ![function.proj.](images/20200722075941.png 'function.proj')
 
- 
-![A diagram showing the range of hackathon.](images/20200722075942.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722080004.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722080015.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722080020.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722080118.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722080125.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722080247.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722080259.png 'Solution Architecture')
+10. Navigate to Function App blade, select **Restart** to reflect the changes you made.
+![Function blade.](images/20200722075942.png 'Function')
+
+### Task 10: Create PostgreSQL
+
+1. On the resource group blade, select **+ Add**.
+![resource group.](images/20200722080004.png 'resource group')
+
+2. On the **New** blade, select **Databases** from the left-hand menu, then select **Azure Database for PostgreSQL**.
+![Azure Marketplace.](images/20200722080015.png 'Azure Marketplace')
+
+3. On the **Select Azure Database for PostgreSQL deployment option** blade, select **Create** from the **Single server** plan.
+![Select Azure Database for PostgreSQL deployment option.](images/20200722080020.png 'Select Azure Database for PostgreSQL deployment option')
+
+4. On the **Single server** blade, specify the following configuration options:
+
+   a. Enter **your sever name** for the **Server name**.
+   
+   b. Select **same location where resource group exists** for **Location**.
+   
+   c. Enter **Admin name** and **Password**.
+   
+   d. Select **Review + create**.
+![Single server.](images/20200722080118.png 'Single server')
+
+5. Review the configurations, then select **Create**.
+![Review.](images/20200722080125.png 'Review')
+
+6. After the PostgreSQL is created, navigate it to PostgreSQL by selecting **Go to resource**.
+![Deployment is complete.](images/20200722080247.png 'Completed')
+
+7. On the **PostgreSQL** blade, select **Connection security** from the left-hand menu.
+![PostgreSQL blade.](images/20200722080259.png 'PostgreSQL blade')
+
+8. 
 ![A diagram showing the range of hackathon.](images/20200722080309.png 'Solution Architecture')
 ![A diagram showing the range of hackathon.](images/20200722080328.png 'Solution Architecture')
 ![A diagram showing the range of hackathon.](images/20200722080438.png 'Solution Architecture')
