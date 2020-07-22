@@ -60,7 +60,7 @@ Step-by-step-Guide-01
 3. On the **New container** blade, enter **samples-workitems** for the **Name**.
 
 ![New container blade.](images/20200722074139.png 'New container')
-**Note** The name you specified here will be used for the path which Blob trigger Function.
+**Note** The name you specified here will be used as the path for Blob trigger Function.
 
 4. After the container is created, select **samples-workitmes** on the containers blade.
 ![containers blade.](images/20200722074145.png 'container')
@@ -72,7 +72,7 @@ Step-by-step-Guide-01
 
 2. On the **Upload blob** blade, specify the following configuration options:
 
-   a. Click **Folder icon** for to select the file, **dummy.data** on local.
+   a. Click **Folder icon** to select the file, **dummy.data** on local.
    
    b. Select **Upload**.
    
@@ -83,18 +83,59 @@ Step-by-step-Guide-01
 ![Uploaded file.](images/20200722074213.png 'Uploaded')
 
 
-![A diagram showing the range of hackathon.](images/20200722074246.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722074258.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722074304.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722074326.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722074333.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722074458.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722074510.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722074515.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722074522.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722074534.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075100.png 'Solution Architecture')
-![A diagram showing the range of hackathon.](images/20200722075105.png 'Solution Architecture')
+### Task 5: Create Function App
+
+1. On the resource group blade, select **+ Add**.
+![resource group blade.](images/20200722074246.png 'resource group')
+
+2. On the **New** blade, enter **function app** into the search box. Select Function App from the results.
+![new resource blade.](images/20200722074258.png 'new resource')
+
+3. Select **Create**.
+![Function App blade.](images/20200722074304.png 'Function App')
+
+4. On the **Create Function App** blade, specify the following configuration options:
+
+   a. Enter **your function app name** for the **Function App name**.
+   
+   b. Select **.NET Core** fot the **Runtime stack**.
+   
+   c. Select **same location where resource group exists** for **Region**.
+
+   d. Select **Review + create**.
+![Create Function App blade.](images/20200722074326.png 'Create Function App')
+
+5. Review the configurations, then select **Create**.
+![Review.](images/20200722074333.png 'Review')
+
+6. After the Function App is created, navigate to it by selecting **Go to resource**.
+![Deployment is complete.](images/20200722074458.png 'Completed deployment')
+
+### Task 6: Create Blob Storage trigger
+
+1. On the **Function App** blade, select **Functions** from the left-hand menu, then select **+ Add**.
+![Function App blade.](images/20200722074510.png 'Function App')
+
+2. On the **New Function** blade, select **Azure Blob Storage trigger**.
+![New Function blade.](images/20200722074515.png 'New Function')
+
+3. On the **New Function** blade, specify the following configuration options:
+
+   a. Check if **pass** is same with the pass you created in the **task 3**.
+   
+   b. Select **New** for the **Storage Account Connection**.
+![New Function blade.](images/20200722074522.png 'New Function')
+
+4. Select **Storage Account** you created in the **task 2**, then select **Create Function**.
+![New Function blade.](images/20200722074534.png 'New Function')
+
+5. After the Function is created, select **BlobTrigger1**.
+![Functions blade.](images/20200722075100.png 'Functions')
+
+6. Select **Monitor** from the left-hand menu.
+![BlobTrigger1 blade.](images/20200722075105.png 'BlobTrigger1')
+
+7. 
 ![A diagram showing the range of hackathon.](images/20200722075116.png 'Solution Architecture')
 ![A diagram showing the range of hackathon.](images/20200722075125.png 'Solution Architecture')
 ![A diagram showing the range of hackathon.](images/20200722075158.png 'Solution Architecture')
